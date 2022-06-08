@@ -4,8 +4,10 @@
 }
 
 .App {
+  display: flex;
+  justify-content: center;
   text-align: center;
-  background-image: linear-gradient(rgb(20, 20, 244), rgb(5, 1, 30));
+  
   height: 100vh;
 
 }
