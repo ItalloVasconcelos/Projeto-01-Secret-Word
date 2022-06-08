@@ -6,7 +6,7 @@ Projeto do curso de React do zero a maestria. Primeiro projeto, Secret World Gam
 
 <h4 align="center">Secret World - Processo de Debug!</h4>
 
-<h5> Tecnologias utilizadas:
+ <h5> Tecnologias utilizadas: </br>
  <a href="https://pt-br.reactjs.org/">ReactJS</a> </br>
  <a href="https://www.w3schools.com/css/default.asp">CSS</a>
  </h5>
