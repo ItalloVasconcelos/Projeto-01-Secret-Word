@@ -1,0 +1,49 @@
+.dashboard h1 {
+    font-size: 2.5em;
+
+}
+
+.points span {
+    font-weight: bold;
+}
+
+.tips span {
+    color: rgb(232, 232, 95);
+}
+
+.wordContainer {
+    margin: 1.5em;
+    padding: 1.5em;
+    border: 20px solid rgb(246, 230, 8);
+    display: flex;
+}
+
+.letter, .blankSquare {
+    font-size: 80px;
+    line-height: 1.5;
+    border: 3px solid rgb(0, 0, 0);
+    height: 100px;
+    width: 100px;
+    text-transform: uppercase;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.letterContainer p {
+    margin-bottom: 1.2em;
+}
+
+.letterContainer form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.letterContainer input {
+    height: 50px;
+    width: 50px;
+    font-size: 2em;
+    text-align: center;
+    margin-right: 1em;
+}
