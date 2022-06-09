@@ -1,8 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
-import './App.css';
+
 import Dashboard from './components/dashboard/Dashboard';
-import End from './components/end/End';
 import Home from './components/home/Home';
+import End from './components/end/End';
+
+import './App.css';
+
 // Data
 import { wordsList } from './data/words'
 
@@ -24,20 +27,27 @@ function App() {
   const [wrongLetter, setWrongLetter] = useState([])
   const [guesses, setGuesses] = useState(3)
   const [score, setScore] = useState(0)
+
+  
   
   const pickedWordAndCategory = useCallback(() => {
     const categories = Object.keys(words)
-    const category = categories[Math.floor(Math.random() * Object.keys(categories).length)]
-    console.log(category)
+    const category = 
+    categories[Math.floor(Math.random() * Object.keys(categories).length)]
 
-    const word = words[category][Math.floor(Math.random() * words[category].length)]
-    console.log(word)
+    
 
-    return [word, category]
+    const word = 
+    words[category][Math.floor(Math.random() * words[category].length)]
+    
+
+    return { category, word }
   }, [words]);
 
-  const startGame = useCallback(() =>{
+  const startGame = useCallback(() => {
+    
     clearLetterStates();
+    
     const { category, word } = pickedWordAndCategory();
 
     let wordLetters = word?.split("");
@@ -55,19 +65,20 @@ function App() {
   
   const verifyLetters = (letter) => {
    
-    const normalizedLetter = letter.toLowerCase
+    const normalizedLetter = letter.toLowerCase();
 
-    if(
+    if (
       guessedLetter?.includes(normalizedLetter) || 
       wrongLetter?.includes(normalizedLetter)
     ) {
+
       return
     }
     
     if(letters?.includes(normalizedLetter)) {
       setGuessedLetter((actualGuessedLetter) => [
         ...actualGuessedLetter, 
-        normalizedLetter
+        letter
       ])
     } else {
       setWrongLetter((actualWrongLetter) => [
@@ -79,6 +90,7 @@ function App() {
 
     }
   }
+  
 
   const restartGame = () => {
     setScore(0)
@@ -100,6 +112,7 @@ function App() {
 
   useEffect(() => {
     const uniqueLetter = [...new Set(letters)]
+    
 
     if(guessedLetter.length === uniqueLetter.length) {
       setScore((actualScore ) => (actualScore += 100))
@@ -124,6 +137,7 @@ function App() {
 
       {gameStage === 'end' && <End restartGame={restartGame} score={score}/>}
 
+      
     </div>
   );
 }

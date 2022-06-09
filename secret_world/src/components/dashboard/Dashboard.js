@@ -5,7 +5,6 @@ import './Dashboard.css'
 const Dashboard = ({
     verifyLetters, 
     pickedCategory,
-    pickedWord,
     letters,
     guessedLetters,
     wrongLetter,
@@ -25,10 +24,9 @@ const Dashboard = ({
     setLetter("")
 
     letterInputRef.current.focus()
-
-   }
-    return (
-        <div className="dashboard">
+}
+return (
+    <div className="dashboard">
            <div className="points">
                <span>Pontuação: </span> {score}
            </div>
@@ -43,16 +41,17 @@ const Dashboard = ({
             <p>Você ainda tem {guesses} tentativa(s).</p>
 
             <div className="wordContainer">
-                {letters?.map((letter, i) => 
-                    guessedLetters.includes(letter) ? (
-                        <span key={i} className="letter">
-                          {letter}
-                          </span>
+                {letters.map((letter, i) => 
+                    guessedLetters?.includes(letter) ? (
+                        <span className="letter" key={i}>
+                            {letter}
+                        </span>
                     ) : (
                         <span key={i} className="blankSquare"></span>
-                    )
+                        )
                 )}
             </div>
+                        
             
             <div className="letterContainer">
             <p> Tente adivinhar uma letra da palavra: </p>
@@ -75,6 +74,7 @@ const Dashboard = ({
                 <span key={i}> {letter}, </span>
             ))}
             </div>
+            
         </div>
     )
 }
