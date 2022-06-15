@@ -52,7 +52,7 @@ function App() {
 
     let wordLetters = word.split("");
 
-    wordLetters = wordLetters?.map((l) => l.toLowerCase())
+    wordLetters = wordLetters.map((l) => l.toLowerCase())
     
     console.log(wordLetters)
 
@@ -80,12 +80,12 @@ function App() {
     if(letters.includes(normalizedLetter)) {
       setGuessedLetter((actualGuessedLetter) => [
         ...actualGuessedLetter, 
-        normalizedLetter
+        normalizedLetter,
       ])
     } else {
       setWrongLetter((actualWrongLetter) => [
         ...actualWrongLetter, 
-        normalizedLetter
+        normalizedLetter,
       ])
       
       setGuesses((actualGuesses) => actualGuesses - 1)
@@ -127,7 +127,8 @@ function App() {
   return (
     <div className="App">
       {gameStage === 'start' && <Home startGame={startGame} />}
-      {gameStage === 'game' && <Dashboard 
+      {gameStage === 'game' && (
+      <Dashboard 
       verifyLetters={verifyLetters} 
       pickedWord={pickedWord} 
       pickedCategory={pickedCategory} 
@@ -136,7 +137,7 @@ function App() {
       wrongLetter={wrongLetter} 
       guesses={guesses} 
       score={score}/>
-      }
+      )}
 
       {gameStage === 'end' && <End restartGame={restartGame} score={score}/>}
 

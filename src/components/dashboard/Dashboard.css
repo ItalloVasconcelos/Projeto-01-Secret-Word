@@ -18,8 +18,9 @@
     display: flex;
 }
 
-.letter, .blankSquare {
-    font-size: 80px;
+.letter,
+.blankSquare {
+    font-size: 70px;
     line-height: 1.5;
     border: 3px solid rgb(0, 0, 0);
     height: 100px;

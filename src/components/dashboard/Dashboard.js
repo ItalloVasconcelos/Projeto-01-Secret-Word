@@ -1,4 +1,5 @@
 import { useRef, useState } from "react"
+
 import Button from "../button/Button"
 import './Dashboard.css'
 
@@ -6,7 +7,7 @@ const Dashboard = ({
     verifyLetters, 
     pickedCategory,
     letters,
-    guessedLetters,
+    guessedLetter,
     wrongLetter,
     guesses,
     score,
@@ -25,6 +26,7 @@ const Dashboard = ({
 
     letterInputRef.current.focus()
 }
+
 return (
     <div className="dashboard">
            <div className="points">
@@ -41,16 +43,16 @@ return (
             <p>Você ainda tem {guesses} tentativa(s).</p>
 
             <div className="wordContainer">
-               {letters?.map((letter, i) => (
-                guessedLetters?.includes(letter) ? (
+               {letters.map((letter, i) => 
+                guessedLetter.includes(letter) ? (
                     <span key={i} className="letter">
                         {letter}
                     </span>
 
                 ) : (
-                    <span key={i} className="blankSquare"></span>
+                    <span  key ={i}className="blankSquare"></span>
                 )
-               ))}
+               )}
             </div>
                         
             
