@@ -50,9 +50,11 @@ function App() {
     
     const { category, word } = pickedWordAndCategory();
 
-    let wordLetters = word?.split("");
+    let wordLetters = word.split("");
 
     wordLetters = wordLetters?.map((l) => l.toLowerCase())
+    
+    console.log(wordLetters)
 
     setPickedCategory(category);
     setPickedWord(word);
@@ -68,27 +70,28 @@ function App() {
     const normalizedLetter = letter.toLowerCase();
 
     if (
-      guessedLetter?.includes(normalizedLetter) || 
-      wrongLetter?.includes(normalizedLetter)
+      guessedLetter.includes(normalizedLetter) || 
+      wrongLetter.includes(normalizedLetter)
     ) {
 
-      return
+      return;
     }
     
-    if(letters?.includes(normalizedLetter)) {
+    if(letters.includes(normalizedLetter)) {
       setGuessedLetter((actualGuessedLetter) => [
         ...actualGuessedLetter, 
-        letter
+        normalizedLetter
       ])
     } else {
       setWrongLetter((actualWrongLetter) => [
         ...actualWrongLetter, 
         normalizedLetter
       ])
-
+      
       setGuesses((actualGuesses) => actualGuesses - 1)
-
     }
+    console.log(guessedLetter)
+    console.log(wrongLetter)
   }
   
 

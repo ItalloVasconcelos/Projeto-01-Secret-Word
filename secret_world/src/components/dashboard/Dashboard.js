@@ -41,15 +41,16 @@ return (
             <p>Você ainda tem {guesses} tentativa(s).</p>
 
             <div className="wordContainer">
-                {letters.map((letter, i) => 
-                    guessedLetters?.includes(letter) ? (
-                        <span className="letter" key={i}>
-                            {letter}
-                        </span>
-                    ) : (
-                        <span key={i} className="blankSquare"></span>
-                        )
-                )}
+               {letters?.map((letter, i) => (
+                guessedLetters?.includes(letter) ? (
+                    <span key={i} className="letter">
+                        {letter}
+                    </span>
+
+                ) : (
+                    <span key={i} className="blankSquare"></span>
+                )
+               ))}
             </div>
                         
             
