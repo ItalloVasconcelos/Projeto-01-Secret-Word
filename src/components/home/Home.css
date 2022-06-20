@@ -8,3 +8,8 @@ p {
     color: #FF9b64;
     font-size: 25px;
 }
+
+a {
+    color: #ffff;
+    text-decoration: none;
+}
