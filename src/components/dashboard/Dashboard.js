@@ -29,18 +29,17 @@ const Dashboard = ({
 
 return (
     <div className="dashboard">
-           <div className="points">
-               <span>Pontuação: </span> {score}
-           </div>
 
             <div className="header">
-            <h1>Adivinhe a Palavra: </h1>
+            <h1> Adivinhe a palavra </h1>
             </div>
-
             <h3 className="tips">
              Dica sobre a palavras: <span> {pickedCategory} </span>
             </h3>
             <p>Você ainda tem {guesses} tentativa(s).</p>
+           <div className="points">
+               <span> Sua pontuação: {score}</span> 
+           </div>
 
             <div className="wordContainer">
                {letters.map((letter, i) => 

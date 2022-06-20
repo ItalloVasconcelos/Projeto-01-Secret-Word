@@ -11,8 +11,14 @@ html, body {
 
 .points span {
     font-weight: bold;
+    color: #00f47e;
+    font-size: 20px;
+    
 }
 
+.guessesCounter {
+    color: red;
+}
 .tips span {
     color: #769b0d;
 }
