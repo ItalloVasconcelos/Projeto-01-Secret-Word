@@ -1,5 +1,11 @@
+html, body {
+    box-sizing: border-box;
+    max-width: 1300px;
+    min-width: 500px;
+    
+}
 .dashboard h1 {
-    font-size: 2.5em;
+    font-size: 2em;
 
 }
 
@@ -8,13 +14,14 @@
 }
 
 .tips span {
-    color: rgb(232, 232, 95);
+    color: #769b0d;
 }
 
 .wordContainer {
     margin: 1.5em;
     padding: 1.5em;
-    border: 20px solid rgb(246, 230, 8);
+    border: 15px solid rgb(254, 242, 3);
+    border-radius: 30px;
     display: flex;
 }
 
@@ -48,3 +55,4 @@
     text-align: center;
     margin-right: 1em;
 }
+
