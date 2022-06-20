@@ -73,7 +73,7 @@ return (
             <div className="wrongLetterContainer">
             <p>Letras utilizadas: </p>
             {wrongLetter?.map((letter, i) =>  (
-                <span key={i}> {letter}, </span>
+                <span key={i} className="usedLetters"> {letter}, </span>
             ))}
             </div>
             
