@@ -14,4 +14,4 @@ Projeto do curso de React do zero a maestria. Primeiro projeto, Secret World Gam
  <h3>Autor</h3>
  <p>Feito por: <a href="https://www.linkedin.com/in/itallo-vasconcelos-7441b4158/" target="_blank">Itallo Vasconcelos</a> 👋🏽 Entre em contato! </p>
  
- <a align="center" href = "https://secret-world-game.netlify.app/"> Link para visualizar o projeto!!</a>
+ <a align="center" href = "[https://secret-world-game.netlify.app/](https://secret-word-game-itallo.netlify.app/)"> Link para visualizar o projeto!!</a>
