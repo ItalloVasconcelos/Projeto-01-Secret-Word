@@ -4,7 +4,7 @@
 Projeto do curso de React do zero a maestria. Primeiro projeto, Secret World Game. Em resumo, é um jogo de adivinhação da palavra, onde eu dou uma dica de qual categoria está e o usuário terá que adicionar letras até adivinhar qual a palavra correta. O usuário tem até 3 tentativas.
 </p>
 
-<h4 align="center">Secret World - Finalizado ✔✔✔</h4>
+<h4 align="center">Secret Word - Finalizado ✔✔✔</h4>
 
  <h5> Tecnologias utilizadas: </br>
  <a href="https://pt-br.reactjs.org/">ReactJS</a> </br>
